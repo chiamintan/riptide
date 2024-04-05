@@ -91,6 +91,7 @@ PIPELINE_CONFIG_SCHEMA = Schema({
         },
 
     'harmonic_flagging': {
+        'enable': Schema(bool, error='enable must be a boolean'),
         'denom_max': And(int, strictly_positive, error="denom_max must be an int > 0"),
         'phase_distance_max': And(
             Use(float), strictly_positive, error="phase_distance_max must be a number > 0"),
