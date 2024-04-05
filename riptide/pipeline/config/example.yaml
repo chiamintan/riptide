@@ -175,6 +175,8 @@ clustering:
 # NOTE: this is only a flagging operation, the actual *removal* of candidates 
 # flagged as harmonics is entirely optional, see below
 harmonic_flagging:
+  # Skip harmonic flagging if false
+  enable: true
   denom_max: 100
   phase_distance_max: 1.0
   dm_distance_max: 3.0

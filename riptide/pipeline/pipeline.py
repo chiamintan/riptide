@@ -216,6 +216,10 @@ class Pipeline(object):
 
     @timing
     def flag_harmonics(self):
+        if not self.config['harmonic_flagging']['enable']:
+            log.info("Harmonic flagging is disabled, skipping it")
+            return
+
         if not self.clusters:
             log.info("No clusters found: skipping harmonic flagging")
             return
